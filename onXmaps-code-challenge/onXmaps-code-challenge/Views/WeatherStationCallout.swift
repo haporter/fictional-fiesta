@@ -10,9 +10,9 @@ import UIKit
 class WeatherStationCallout: UIView {
     
     private lazy var tempImageView: UIImageView = {
-        var image = UIImage(systemName: "thermometer.medium")
+        let image = UIImage(systemName: "thermometer.medium")
         
-        var imageView = UIImageView(image: image)
+        let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.tintColor = .black
         imageView.contentMode = .scaleAspectFit
@@ -21,8 +21,8 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var windSpeedImageView: UIImageView = {
-        var image = UIImage(systemName: "wind")
-        var imageView = UIImageView(image: image)
+        let image = UIImage(systemName: "wind")
+        let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.tintColor = .black
         imageView.contentMode = .scaleAspectFit
@@ -31,8 +31,8 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var windDirectionImageView: UIImageView = {
-        var image = UIImage(systemName: "wind")
-        var imageView = UIImageView(image: image)
+        let image = UIImage(systemName: "wind")
+        let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.tintColor = .black
         imageView.contentMode = .scaleAspectFit
@@ -41,8 +41,8 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var precipImageView: UIImageView = {
-        var image = UIImage(systemName: "cloud.rain.fill")
-        var imageView = UIImageView(image: image)
+        let image = UIImage(systemName: "cloud.rain.fill")
+        let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.tintColor = .black
         imageView.contentMode = .scaleAspectFit
@@ -51,7 +51,7 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var temp: UILabel = {
-        var label = UILabel()
+        let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .callout)
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -63,7 +63,7 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var windSpeed: UILabel = {
-        var label = UILabel()
+        let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .callout)
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -75,7 +75,7 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var windDirection: UILabel = {
-        var label = UILabel()
+        let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .callout)
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -87,9 +87,9 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var windIndicatorImageView: UIImageView = {
-        var image = UIImage(systemName: "arrow.right")
+        let image = UIImage(systemName: "arrow.right")
         
-        var imageView = UIImageView(image: image)
+        let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.tintColor = .black
         imageView.contentMode = .scaleAspectFit
@@ -102,7 +102,7 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var chanceOfPrecip: UILabel = {
-        var label = UILabel()
+        let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .callout)
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -112,7 +112,7 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var dataStackView: UIStackView = {
-        var stackView = UIStackView(frame: .zero)
+        let stackView = UIStackView(frame: .zero)
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 4
@@ -121,7 +121,7 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var imageStackView: UIStackView = {
-        var stackView = UIStackView(frame: .zero)
+        let stackView = UIStackView(frame: .zero)
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 4
@@ -130,7 +130,7 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var horizontalStackView: UIStackView = {
-        var stackView = UIStackView(arrangedSubviews: [imageStackView, dataStackView])
+        let stackView = UIStackView(arrangedSubviews: [imageStackView, dataStackView])
         stackView.axis = .horizontal
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 32

@@ -17,7 +17,6 @@ final class WeatherStation: NSObject, Codable {
     let windSpeed: Double?
     let windDirection: Int?
     let chanceOfPrecipitation: Int
-
 }
 
 extension WeatherStation: MKAnnotation {
