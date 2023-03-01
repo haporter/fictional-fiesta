@@ -94,7 +94,7 @@ class WeatherStationCallout: UIView {
         imageView.tintColor = .black
         imageView.contentMode = .scaleAspectFit
         
-        let cardinalRotation = 90.deg2rad()
+        let cardinalRotation = 90.deg2rad() // Rotation adjustment to match 0 degrees to North
         imageView.transform = imageView.transform.rotated(by: cardinalRotation)
         imageView.transform = imageView.transform.rotated(by: (weatherStation.windDirection ?? 0).deg2rad())
         
