@@ -16,7 +16,6 @@ class MapViewModel: ObservableObject {
     @Published private(set) var weatherStations: [WeatherStation] = []
     @Published var daySelection: Int = 0
     @Published var weatherDisplayData: Int
-    @Published var shouldRefresh: Bool = false
     var mapRegionSubject = PassthroughSubject<MKCoordinateRegion, Never>()
         
     private var todayWeatherData = CurrentValueSubject<[WeatherStation], Never>([])
@@ -32,7 +31,6 @@ class MapViewModel: ObservableObject {
     private func subscribe() {
         Publishers
             .CombineLatest3(todayWeatherData, tomorrowWeatherData, $daySelection)
-//            .combineLatest($daySelection)
             .map { (today, tomorrow, daySelection) in
                 daySelection == 0 ? today : tomorrow
             }
@@ -58,9 +56,8 @@ class MapViewModel: ObservableObject {
         
         $weatherDisplayData
             .dropFirst()
-            .sink { [weak self] value in
+            .sink { value in
                 UserDefaultsStore.stationDataToDisplay = value
-                self?.shouldRefresh = true
             }
             .store(in: &bag)
     }

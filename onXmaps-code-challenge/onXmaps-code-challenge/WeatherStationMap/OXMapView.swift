@@ -25,10 +25,15 @@ struct OXMapView: UIViewRepresentable {
     
     func updateUIView(_ uiView: MKMapView, context: Context) {
         let oldAnnotations = uiView.annotations.compactMap { $0 as? WeatherStation }
-        let subtractions = Set(oldAnnotations).subtracting(Set(viewModel.weatherStations))
-        let insertions = Set(viewModel.weatherStations).subtracting(Set(oldAnnotations))
-        uiView.removeAnnotations(subtractions.array)
-        uiView.addAnnotations(insertions.array)
+        if Set(oldAnnotations) == Set(viewModel.weatherStations) {
+            uiView.removeAnnotations(oldAnnotations)
+            uiView.addAnnotations(viewModel.weatherStations)
+        } else {
+            let subtractions = Set(oldAnnotations).subtracting(Set(viewModel.weatherStations))
+            let insertions = Set(viewModel.weatherStations).subtracting(Set(oldAnnotations))
+            uiView.removeAnnotations(subtractions.array)
+            uiView.addAnnotations(insertions.array)
+        }
     }
     
     func makeCoordinator() -> Coordinator {
