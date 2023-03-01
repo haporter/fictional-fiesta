@@ -10,7 +10,7 @@ import UIKit
 class WeatherStationCallout: UIView {
     
     private lazy var tempImageView: UIImageView = {
-        var image = UIImage(systemName: "thermometer.medium")!
+        var image = UIImage(systemName: "thermometer.medium")
         
         var imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -21,7 +21,7 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var windSpeedImageView: UIImageView = {
-        var image = UIImage(systemName: "wind")!
+        var image = UIImage(systemName: "wind")
         var imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.tintColor = .black
@@ -31,7 +31,7 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var windDirectionImageView: UIImageView = {
-        var image = UIImage(systemName: "wind")!
+        var image = UIImage(systemName: "wind")
         var imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.tintColor = .black
@@ -41,7 +41,7 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var precipImageView: UIImageView = {
-        var image = UIImage(systemName: "cloud.rain.fill")!
+        var image = UIImage(systemName: "cloud.rain.fill")
         var imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.tintColor = .black
@@ -87,7 +87,7 @@ class WeatherStationCallout: UIView {
     }()
     
     private lazy var windIndicatorImageView: UIImageView = {
-        var image = UIImage(systemName: "arrow.right")!
+        var image = UIImage(systemName: "arrow.right")
         
         var imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
